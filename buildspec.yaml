@@ -3,7 +3,8 @@ phases:
     commands:
        - "echo Build started on `date`"
        - "echo Building the Docker image..."
-       - "docker build -t python-demo ."
+       - "cd docker-distribution "
+       - "docker build -t python-demo . "
        - "docker tag python-demo:latest 372045710271.dkr.ecr.us-east-1.amazonaws.com/python-demo"
   post_build:
     commands:
